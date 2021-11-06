@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Red Hat display, "Courier New", Courier;
+}
+body {
+  background: url(../img/pattern-background-desktop.svg) no-repeat;
+  background-color: #e0e8ff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 450px;
+}
+
+.card-content {
+  padding: 40px;
+}
+.principal-img {
+  border-radius: 15px 15px 0 0;
+}
+.title {
+  text-align: center;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+.text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas:
+    "icon title-anual btn-anual"
+    "icon value-anual btn-anual";
+  background: hsl(225, 100%, 98%);
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.icon {
+  grid-area: icon;
+  justify-self: center;
+  align-self: center;
+}
+
+.title-anual {
+  grid-area: title-anual;
+  font-size: 16px;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+.value-anual {
+  grid-area: value-anual;
+  font-size: 14px;
+  color: hsl(224, 23%, 55%);
+}
+
+.title-anual,
+.value-anual {
+  margin-left: 15px;
+}
+.btn-anual {
+  grid-area: btn-anual;
+  justify-self: center;
+  align-self: center;
+  color: hsl(245, 75%, 52%);
+  font-weight: bold;
+}
+
+.btn-anual:hover {
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btn-pay {
+  background: hsl(245, 75%, 52%);
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-pay:hover {
+  opacity: 80%;
+}
+
+.btn-cancel {
+  text-decoration: none;
+  margin-top: 20px;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 300px;
+    height: 500px;
+  }
+
+  .card-content {
+    padding: 30px;
+  }
+
+  .principal-img {
+    width: 300px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 12px;
+  }
+
+  .title-anual {
+    font-size: 14px;
+  }
+
+  .value-anual {
+    font-size: 12px;
+  }
+  .btn-anual {
+    font-size: 12px;
+  }
+}
